@@ -1,0 +1,84 @@
+Task 1: A* Path Planning
+
+Test Case 1 - Simple Path
+Grid:
+S.......
+........
+........
+........
+........
+.......G
+Path Found: YES
+Path:
+(0, 0) -> (0, 1) -> (0, 2) -> (0, 3) -> (0, 4) -> (0, 5) -> (0, 6) -> (0, 7) -> (1, 7) -> (2, 7) -> (3, 7) -> (4, 7) -> (5, 7)
+Total Path Cost: 12
+Nodes Explored: 48
+Execution Time: 0.00006075 seconds
+Visualization: visualizations/testcase_1.png
+
+Test Case 2 - Multiple Possible Paths
+Grid:
+S........
+.#####...
+.........
+...#####.
+.........
+...#####.
+........G
+Path Found: YES
+Path:
+(0, 0) -> (0, 1) -> (0, 2) -> (0, 3) -> (0, 4) -> (0, 5) -> (0, 6) -> (0, 7) -> (0, 8) -> (1, 8) -> (2, 8) -> (3, 8) -> (4, 8) -> (5, 8) -> (6, 8)
+Total Path Cost: 14
+Nodes Explored: 48
+Execution Time: 0.00006487 seconds
+Visualization: visualizations/testcase_2.png
+
+Test Case 3 - Narrow Passage
+Grid:
+S..#......
+.#.#.####.
+.#.#......
+.#.######.
+.#........
+.########.
+.#.......G
+..........
+Path Found: YES
+Path:
+(0, 0) -> (0, 1) -> (0, 2) -> (1, 2) -> (2, 2) -> (3, 2) -> (4, 2) -> (4, 3) -> (4, 4) -> (4, 5) -> (4, 6) -> (4, 7) -> (4, 8) -> (4, 9) -> (5, 9) -> (6, 9)
+Total Path Cost: 15
+Nodes Explored: 22
+Execution Time: 0.00003512 seconds
+Visualization: visualizations/testcase_3.png
+
+Test Case 4 - Different Obstacle Arrangement
+Grid:
+S.........
+..........
+......#...
+......#...
+.#..#..#.#
+...#...#..
+.........G
+Path Found: YES
+Path:
+(0, 0) -> (0, 1) -> (0, 2) -> (0, 3) -> (0, 4) -> (0, 5) -> (0, 6) -> (0, 7) -> (0, 8) -> (1, 8) -> (2, 8) -> (3, 8) -> (4, 8) -> (5, 8) -> (5, 9) -> (6, 9)
+Total Path Cost: 15
+Nodes Explored: 61
+Execution Time: 0.00007429 seconds
+Visualization: visualizations/testcase_4.png
+
+Test Case 5 - No Valid Path
+Grid:
+S..#..
+.##.##
+...#..
+##.###
+..#..G
+######
+Path Found: NO
+No valid path exists.
+Total Path Cost: N/A
+Nodes Explored: 8
+Execution Time: 0.00001088 seconds
+Visualization: visualizations/testcase_5.png
